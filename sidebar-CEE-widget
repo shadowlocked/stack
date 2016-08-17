@@ -1,0 +1,309 @@
+<!-- #######  CEE CONTENT ######### -->
+<!-- ################ -->
+<!-- ################ -->
+<!-- ################ -->
+<!-- ################ -->
+<!-- ################ -->
+<div class="sidebarshows">
+<!-- CEE logo -->
+
+<div style="align:center; width:100%; margin:0 auto;">
+<img alt="Cloud Expo Europe 2017 at the Excel Centre, London" title="Cloud Expo Europe 2017 at the Excel Centre, London" src="https://thestack.com/wp-content/uploads/2016/08/CEE-LOGO-.png" width="800" height="618" alt=""/>
+</div>
+<p style="font-weight:bold;color:#46c1be; font-family:Proxima-nova, Arial, sans-serif; font-size:18px; text-align:center; margin-bottom:20px;">15-16 March 2017<br> Excel Centre, London</p>
+
+
+<!-- Cloud Expo Europe SIDEBAR - THIS IS EXCLUDED FROM ALL BUT CEE PAGES -->
+<!-- BUTTONS -->
+<a class="sidebarceelink" href="https://thestack.com/register-interest-cloud-expo-europe/">Register  ></a>
+
+
+
+<a class="sidebarceelinkblue" style="background-color:#46c1be !important;" href="https://thestack.com/cloud-expo-europe-exhibitors/">Exhibitor List ></a>
+
+<a class="sidebarceelinkblue" href="https://thestack.com/cloud-expo-europe-why-visit-the-worlds-most-acclaimed-cloud-event/">Why visit ></a>
+
+<a class="sidebarceelinkblue" href="https://thestack.com/exhibiting-at-cloud-expo-europe/">Why exhibit ></a>
+
+<a class="sidebarceelinkblue" href="https://thestack.com/whats-new-at-cloud-expo-europe/">What's new ></a>
+
+<a class="sidebarceelinkblue" href="https://thestack.com/cloud-expo-europe-theatres-and-topics/">Theatres & Topics ></a>
+
+<p>&nbsp;</p>
+
+<h2>Venue & Opening Times</h2>
+
+<p>ExCeL, London
+1 Western Gateway, Royal Victoria Dock,
+London E16 1XL</p>
+
+<p>Tuesday 12 April - 09:30 - 17:00
+Wednesday 13 April - 09:30 - 17:00</p>
+
+<p>&nbsp;</p>
+
+
+
+<!-- #######  SPONSORS ######### -->
+
+<h2>Select sponsors</h2>
+<p>&nbsp;</p>
+
+<div class="lined">
+
+<h3>Diamond Sponsor</h3>
+<img class="sponsorimages" src="https://thestack.com/wp-content/uploads/2016/08/cloud-expo-europe-dell.png" alt="Dell" title="Dell  - Diamond Sponsor of Cloud Expo Europe 2017"/>
+
+
+<h3 style="margin-top:15px; margin-bottom:20px;">Premier Sponsor</h3>
+<img class="sponsorimages" src="https://thestack.com/wp-content/uploads/2016/08/cloud-expo-europe-IBM.png" alt="IBM" title="IBM"/>
+
+<h3 style="margin-top:35px; margin-bottom:20px;">Cloud Visionary Sponsors</h3>
+<img class="sponsorimages" src="https://thestack.com/wp-content/uploads/2016/08/Visionary-Sponsors-Cloud-Expo-Europe-2017-3.png" alt="CEE Visionary Sponsors" title="CEE Visionary Sponsors"/>
+
+
+<h3 style="margin-top:35px; margin-bottom:30px;">Cloud Innovator Sponsors</h3>
+<div style="width:95% !important;">
+<img class="sponsorimages" src="https://thestack.com/wp-content/uploads/2016/08/Cloud-Innovator-Sponsors-Cloud-Expo-Europe-2017-d.png" alt="CEE Innovator Sponsors" title="CEE Innovator Sponsors"/>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+<!-- #######  END SPONSORS ######### -->
+
+
+
+
+
+<!-- ####  CLOSING INITIAL SIDEBAR DIV ##### -->
+</div>
+
+
+
+<!-- #######  STYLES ######### -->
+<!-- ################ -->
+<!-- ################ -->
+<!-- ################ -->
+<!-- ################ -->
+<!-- ################ -->
+<style>
+
+.master-content {
+   padding-top: 65px !important; 
+}
+
+.master-content > .row {
+    padding-top: 40px !important;
+}
+
+
+.wpcf7-form-control {
+    border: 1px solid #9f9f9f;
+    width: 100% !important;
+    font-family: PROXIMA-NOVA,Arial,sans-serif;
+    font-size: 20px;
+}
+.wpcf7-submit {
+    border: 1px solid #9f9f9f;
+max-width:120px !important;
+color:#FFFFFF !important;
+background-color:#004185 !important;
+font-weight:bold !important;
+font-size:20px !important;
+}
+.title {
+color:#15498d  !important;
+font-size:280%;
+}
+.sidebarceelink {
+background-color:#46c1be !important;	
+font-size:18px !important;
+color:#FFFFFF !important;
+display:block !important;
+text-align:center !important;
+text-decoration:none !important;
+font-family:Proxima-nova, Arial, sans-serif !important;
+height:45px !important;
+padding-top:10px !important;
+padding-bottom:10px !important;
+text-transform:uppercase;
+font-weight:bold;
+
+	
+}
+body {
+background-color:#2c435b !important;
+}
+
+.ulstyle {
+padding-bottom:15px !important;
+}
+.listcontainer {
+padding-top:10px !important;
+}
+.sidebarceelinkblue {
+background-color:#004185;	
+font-size:18px !important;
+color:#FFFFFF !important;
+display:block !important;
+text-align:center !important;
+text-decoration:none !important;
+height:45px !important;
+padding-top:10px !important;
+padding-bottom:10px !important;
+text-transform:uppercase;
+margin-top:7px !important;
+font-weight:bold;
+font-family:Proxima-nova, Arial, sans-serif !important;
+
+}
+
+.sidebarceelinkred {
+background-color:#bd1e1e!important;	
+font-size:18px !important;
+color:#FFFFFF !important;
+display:block !important;
+text-align:center !important;
+text-decoration:none !important;
+height:45px !important;
+padding-top:10px !important;
+padding-bottom:10px !important;
+text-transform:uppercase;
+margin-top:7px !important;
+font-weight:bold;
+font-family:Proxima-nova, Arial, sans-serif !important;
+
+}
+.ceeblue {
+color: #004185 !important;
+}
+.ceemarine {
+color: #46c1be !important;
+}
+
+
+.updown {
+display:block !important;
+margin-top:30px !important;
+margin-bottom:40px !important;
+}
+
+body {
+	background-image:url('https://thestack.com/wp-content/uploads/2016/08/Background-Cloud-Expo2asz.png');
+	background-size:1920px;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:top;
+	
+}
+a.showlinks:link,  a.showlinks:visited, a.showlinks:hover {
+font-weight:bold !important;
+text-decoration: none !important;
+color:#46c1be !important;
+}
+
+.post-content p, .post-content ul, .post-content ol, .post-content dl {
+    line-height: 150%;
+ font-size: 1.200rem 
+}
+
+.master-article .title {
+ margin-top: -5px;
+ text-align: right;
+}
+
+.top-space-all {
+ padding-top: 60px;
+}
+.xpem {
+margin-left:-50px !important;
+
+}
+ @media only screen and (max-width: 40em) {
+.xpem {
+margin-left:0 !important;
+width:100% !important;
+
+}
+
+.master-content {
+    padding-top: 40px !important;
+}
+.lined {
+	border-left:none !important;
+}
+
+
+
+
+
+h3 {
+font-size:20px !important;
+
+
+
+}
+
+h2 {
+font-size:20px !important;
+
+
+
+}
+
+.title {
+font-size:30px !important;
+text-align:left !important;
+}
+
+.top-space-all {
+ padding-top: 10px !important;
+padding-bottom:10px !important;
+}
+
+
+}
+
+.sidebarshows h3 {
+color:#004185;
+font-weight:bold;
+font-size:20px;
+text-align:center;
+
+}
+.sidebarshows h2 {
+color: #46c1be !important;
+font-weight:bold;
+font-size:22px;
+text-align:center;
+
+}
+
+.sidebarshows p {
+
+}
+
+
+.sponsorimages {
+display:block !important;
+max-width:70%;
+height:auto !important;
+margin:0 auto !important;
+
+
+}
+
+.lined {
+	border-left:solid 1px #F1F1F1;
+	
+	
+	
+}
+</style>
