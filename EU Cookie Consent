@@ -1,0 +1,38 @@
+CONTENT 
+=======================================
+
+<div>
+<p class="eutext" style="text-align: center;">The Stack uses cookies. Click <a style="color: #ffffff !important; text-decoration:underline !important;" href="https://thestack.com/cookies/">here</a> to see details of our terms of usage.</p>
+</div>
+======================================
+CSS
+
+#spu-44869 {
+    /* margin-top:80px !important; */
+    /* z-index: 9999999999999999999999999 !important; */
+    height:80px !important;
+}
+.spu-timer {
+    display:none !important;
+}
+.eutext {
+    /* display:block !important; */
+    padding-top:40px !important;
+}
+/*  MOBILE  */
+@media only screen and (max-width: 40em) {
+#spu-44869 {
+    margin-top:0px !important;
+    height:105px !important;
+}
+.eutext {
+        margin-top:0px !important;
+    }
+}
+===========================================================
+
+EDITOR SETTINGS
+
+https://thestack.com/images/EUCOOKIECONSENT-editor.png
+
+============================================================
