@@ -1,12 +1,11 @@
 CONTENT 
 =======================================
-
 <div>
 <p class="eutext" style="text-align: center;">The Stack uses cookies. Click <a style="color: #ffffff !important; text-decoration:underline !important;" href="https://thestack.com/cookies/">here</a> to see details of our terms of usage.</p>
 </div>
 ======================================
 CSS
-
+======================================
 #spu-44869 {
     /* margin-top:80px !important; */
     /* z-index: 9999999999999999999999999 !important; */
