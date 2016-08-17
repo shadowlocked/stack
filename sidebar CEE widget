@@ -247,6 +247,11 @@ width:100% !important;
 
 }
 
+#mobnon {
+
+display:none !important;
+}
+
 .innerlogo {
 display:block !important;
 	
@@ -330,7 +335,7 @@ margin:0 auto !important;
 
 /* TABLET PORTRAIT */
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 64em) {
 
 
 .innerlogo {
