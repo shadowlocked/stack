@@ -78,7 +78,10 @@ Wednesday 13 April - 09:30 - 17:00</p>
 
 <!-- #######  END SPONSORS ######### -->
 
+<p>&nbsp;</p>
 
+<h3 style="color:#000000 !important;">Organised by</h3>
+<div style="display:block; max-width:75%; margin:0 auto;"><img src="https://thestack.com/wp-content/uploads/2016/08/CloserStillLogo.png"  alt="Organised by CloserStill Media" title="Organised by CloserStill Media"/></div>
 
 
 
@@ -94,6 +97,8 @@ Wednesday 13 April - 09:30 - 17:00</p>
 <!-- ################ -->
 <!-- ################ -->
 <style>
+
+
 
 .master-content {
    padding-top: 65px !important; 
@@ -226,12 +231,27 @@ color:#46c1be !important;
 margin-left:-50px !important;
 
 }
- @media only screen and (max-width: 40em) {
+
+.innerlogo {
+display: none !important;
+height:150px;
+width:auto;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 40em) {
 .xpem {
 margin-left:0 !important;
 width:100% !important;
 
 }
+
+.innerlogo {
+display:block !important;
+	
+}
+
 
 .master-content {
     padding-top: 40px !important;
@@ -306,4 +326,41 @@ margin:0 auto !important;
 	
 	
 }
+
+
+/* TABLET PORTRAIT */
+
+@media only screen and (max-width: 40em) {
+
+
+.innerlogo {
+display:block !important;
+	
+}
+
+.master-content {
+    padding-top: 40px !important;
+}
+
+
+
+
+}
+
+
+
+
+/* TABLET LANDSCAPE */
+
+@media only screen and (max-width: 64em) {
+
+.master-content {
+    padding-top: 40px !important;
+}
+
+
+
+
+}
+
 </style>
