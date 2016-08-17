@@ -1,0 +1,28 @@
+STAGING:
+
+
+==============================
+body {
+	background-image:url('https://staging.thestack.com/wp-content/uploads/2016/08/Background-Stack2.png');
+	background-size:1920px;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:top;
+	background-color:#3f444a;
+	
+}
+==============================
+
+STACK EQUIVALENT:
+
+https://thestack.com/wp-content/uploads/2016/08/Background-Stack2.png
+
+
+
+
+
+
+
+
+
+
