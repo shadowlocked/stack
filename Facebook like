@@ -1,0 +1,68 @@
+CONTENT
+======================================
+<div class="spu-box-container"><h2><a style="color: #ffffff !important; text-decoration: none !important;" title="Like The Stack on Facebook (new window or tab)" href="https://www.facebook.com/TheStackdotcom" target="_blank">Like The Stack on Facebook</a></h2><div class="fb-like" style="top: 0 !important;" data-href="https://www.facebook.com/TheStackdotcom" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+</div>
+======================================
+CSS
+======================================
+/*
+* Add custom CSS for this popup
+* Be sure to start your rules with #spu-44905 { } and use !important when needed to override plugin rules
+*/
+#spu-44905 {
+    background-color:#3b5998 !important; 
+      /* background-color:#5d75a9; */
+ /*  background-image:url('https://thestack.com/wp-content/uploads/2016/08/Facebook-like2.jpg') !important; */
+ background-image:url('https://thestack.com/wp-content/uploads/2016/08/stack-bg.png');  background-repeat:no-repeat;
+background-position:bottom;
+
+    padding:15px !important;
+    border-radius: 0;
+    margin-left: 0;
+    border-top:solid 2px #FFFFFF !important;
+    border-right:solid 2px #FFFFFF !important;
+    border-bottom:solid 2px #FFFFFF !important;
+          max-height:125px !important;
+          margin-top:0px !important;
+}
+
+#spu-44905 h2 {
+    color:#FFFFFF !important;
+    font-family:Proxima-nova,Arial,sans-serif !important;
+    font-size:18px !important;
+    margin: 0 !important;
+    line-height:18px !important;
+
+}
+
+.spu-box {
+      box-shadow:none !important;
+}
+.closeclass {
+    padding:0px !important;
+    margin:0px !important;
+}
+.spu-close-popup {
+    background-image: url("/wp-content/uploads/2016/08/Facebook-close-button.png") !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    height: 25px !important;
+    left: 118px;
+    line-height: 17px !important;
+    opacity: 0.5 !important;
+    padding: 5px !important;
+    text-decoration: none !important;
+    width: 25px !important;
+}
+.spu-icon {
+        padding-left: 2px !important;
+         color: #ffffff !important;
+}
+=======================================================
+
+IMAGES
+
+https://thestack.com/images/facebook-like.png
+Facbook like editor.png
