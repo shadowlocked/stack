@@ -1,0 +1,72 @@
+<article class="small-12 medium-6 large-4 columns homepage-article<?php /* rp4wp-col<?php echo RP4WP_Manager_Frontend::get_column_class( $row_counter ); */?>">
+	
+        <?php
+        global $post;
+        setup_postdata($related_post);
+        $post_cat_ids = wp_get_post_categories( $post->ID );
+        $cats = array();	
+        foreach($post_cat_ids as $c){
+                $cat = get_category( $c );               
+                $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+        };
+        ?>
+        <a href="<?php the_permalink(); ?>" class="match-height">
+                <?php if ( has_post_thumbnail() ): ?>
+                        <?php  $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), '486x194_crop' ); ?>
+                        <?php  $small_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), '243x97_crop' ); ?>
+                        <img src='<?php echo esc_url( $small_image_url[0] ); ?>' srcset="<?php echo esc_url( $small_image_url[0] ); ?> 243w, <?php echo esc_url( $large_image_url[0] ); ?> 486w" alt="">
+                <?php else: ?>
+                        <img src="https://placehold.it/243x83" srcset="https://placehold.it/243x83 243w, https://placehold.it/486x166 486w" alt="">
+                <?php endif; ?>
+		<?php /* ?>
+		<p class="data">
+                    <?php if( ! empty( $cats ) ): ?>
+                    <span class="article-category">
+                    <?php $i = 0; $cat_len = count( $cats ); foreach( $cats AS $cat ): $i++ ?>
+                            <?php echo esc_html( $cat['name'] ); ?>
+                            <?php echo $cat_len != $i ? ", " : ""; ?>                        
+                    <?php endforeach; ?>
+                    </span>
+                    <?php endif; ?>
+                    <?php the_time('D jS F Y, g.sa'); //Fri 18th Oct 2015, 12.42pm ?>
+                    </p>
+                   <?php */ ?>
+		<h3 class="title"><?php the_title(); ?></h3>
+	</a>
+        <?php  wp_reset_postdata(); ?>
+<?php
+	// load configuration
+	//$component_manager = new RP4WP_Manager_Component();
+	//$components        = $component_manager->get_components();
+//echo '<pre>' . print_r($related_post, true) . '</pre>';
+	/*
+	<a href="#" class="match-height">
+		<img src="https://placehold.it/320x110" srcset="https://placehold.it/320x110 320w, https://placehold.it/640x220 640w" alt="">
+		<p class="data"><span class="article-category">Cloud</span> Fri 18th Oct 2015, 12.42pm</p>
+		<h3 class="title">U.S. Navy abandons cloud and data centre plans in favour of new strategy</h3>
+	</a>
+	*/
+
+	// check
+	/*if ( null !== $components ) {
+
+		// Load the content template
+		$manager_template = new RP4WP_Manager_Template();
+
+		foreach ( $components as $component_key => $component ) {
+
+			if ( 'wrapper' == $component->type ) {
+				echo '<div class="rp4wp_component_wrapper rp4wp_component_wrapper_' . $component->pos . ' rp4wp_component_' . $component->id . '">';
+				foreach ( $component->components as $inner_component ) {
+					$component_manager->load_component_template( $inner_component, $related_post, $excerpt_length );
+				}
+				echo '</div>';
+			} else {
+				$component_manager->load_component_template( $component, $related_post, $excerpt_length );
+			}
+
+		}
+
+	} */
+	?>
+</article>
