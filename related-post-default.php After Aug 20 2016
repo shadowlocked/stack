@@ -1,0 +1,24 @@
+<article class="rp4wp small-12 medium-6 large-4 columns homepage-article<?php /* rp4wp-col<?php echo RP4WP_Manager_Frontend::get_column_class( $row_counter ); */?>">
+	
+        <?php
+        global $post;
+        setup_postdata($related_post);
+        $post_cat_ids = wp_get_post_categories( $post->ID );
+        $cats = array();	
+        foreach($post_cat_ids as $c){
+                $cat = get_category( $c );               
+                $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+        };
+        ?>
+        <a href="<?php the_permalink(); ?>" class="match-height">
+                <?php if ( has_post_thumbnail() ): ?>
+                        <?php  $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), '486x194_crop' ); ?>
+                        <?php  $small_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), '243x97_crop' ); ?>
+                        <img src='<?php echo "class=\"frep\" " + esc_url( $small_image_url[0] ); ?>' srcset="<?php echo esc_url( $small_image_url[0] ); ?> 243w, <?php echo esc_url( $large_image_url[0] ); ?> 486w" id="treme">
+                <?php else: ?>
+                        <img src="https://placehold.it/243x83" srcset="https://placehold.it/243x83 243w, https://placehold.it/486x166 486w" alt="">
+                <?php endif; ?>
+		<h3 class="title" id="rp4wp"><?php the_title(); ?></h3>
+	</a>
+        <?php  wp_reset_postdata(); ?>
+</article>
