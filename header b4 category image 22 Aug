@@ -1,0 +1,72 @@
+<?php
+get_header(); ?>
+<div class="row leaderboard-spacer"></div>
+<?php 
+    if(is_category('cloud')) {
+        $category_image = aw_get_img_path() . '/category-img-cloud.jpg';
+    } else if(is_category('data-centre')) {
+        $category_image = aw_get_img_path() . '/category-img-data-centre.jpg';
+    } else if(is_category('iot')) {
+        $category_image = aw_get_img_path() . '/category-img-iot.jpg';
+    } else if(is_category('security')) {
+        $category_image = aw_get_img_path() . '/category-img-security.jpg';
+    } else if(is_category('world')) {
+        $category_image = aw_get_img_path() . '/category-img-world.jpg';
+    } else {
+        $category_image = 'https://placehold.it/1150x200';
+    }
+?>
+<div class="row category-label" style="background-image: url(<?php echo $category_image; ?>);">
+	<div class="small-12 columns">
+		<h1 class="category-title"><?php echo single_cat_title( '', false ); ?></h1>
+	</div>
+</div>
+
+<div class="row category-content tablet-gray-right top-space">
+	<div class="small-12 medium-6 large-width columns medium-down-space">
+        <div class="row">
+            <div class="small-12 large-space-left columns">
+	    <?php if ( have_posts() ) : ?>
+                <div class="row author-articles">
+	        <?php while ( have_posts() ) : the_post(); ?>
+                        <?php
+                        $title_yoast = get_post_meta($post->ID, '_yoast_wpseo_title', true);
+                        $the_title = $title_yoast != "" ? $title_yoast : get_the_title();
+                  
+                        $post_cat_ids = wp_get_post_categories( $post->ID );
+                        $cats = array();	
+                        foreach($post_cat_ids as $c){
+                                $cat = get_category( $c );               
+                                $cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+                        };
+                        ?>
+                        <article class="small-12 large-4 columns article-no-photo">
+                                <a href="<?php the_permalink(); ?>" class="match-height">
+                                        <h2 class="title"><?php echo $the_title; ?></h2>
+                                        <p class="data">
+                                        <?php if( ! empty( $cats ) ): ?>
+                                        <span class="article-category">
+                                        <?php $ic = 0; $cat_len = count( $cats ); foreach( $cats AS $cat ): $ic++ ?>
+                                                <?php echo esc_html( $cat['name'] ); ?>
+                                                <?php echo $cat_len != $ic ? ", " : ""; ?>                        
+                                        <?php endforeach; ?>
+                                        </span>
+                                        <?php endif; ?> 
+                                        <?php the_time('D j M Y g.ia'); //Mon 24 Sep 2015 3.35pm ?></p>
+                                </a>
+                        </article>
+                <?php endwhile; ?>
+                </div>
+                    
+                <?php get_template_part('include-pagination'); ?>
+                     
+
+	    <?php endif; ?>    
+        </div>
+        </div>
+    </div>
+
+    <?php get_sidebar(); ?>
+</div>
+
+<?php get_footer(); ?>
