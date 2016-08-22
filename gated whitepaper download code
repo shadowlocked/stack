@@ -1,0 +1,119 @@
+CONTACT FORM IS AT:
+https://thestack.com/wp-admin/admin.php?page=wpcf7&post=45351&active-tab=1#additional-settings-panel
+
+TEST URL
+https://thestack.com/cloud/2016/08/22/white-paper-template/
+-------------------
+[contact-form-7 id="45351" title="Download Form 2 MA"]
+-------------------
+<p class="lead" style="font-weight:bold; font-size:20px; line-height:22px; color:#45afe2;">Thank you for your interest in this document. Please fill in the form to download it:</p>
+
+<p>[email* email placeholder "Email"]</p>
+
+<p>[text* phone placeholder "Phone"]</p>
+
+<p>[text* fname placeholder "First Name"]</p>
+
+<p>[text* lname placeholder "Last Name"]</p>
+
+<p>[text* jobtitle placeholder "Job Title"]</p>
+
+<p>[text* companyname placeholder "Company Name"]</p>
+
+<p>
+Select an Industry:
+[select* industry "Federal/Government" "Datacentre" "Finance" "Healthcare" "Industrial" "ITAD" "Legal/Insurance" "Media & Entertainment" "Mobile" "Non-Profit/Charities" "Retail/Consumer" "Channel"]</p>
+
+<p>Country<br />
+[select country include_blank "Afghanistan" "Albania" "Algeria" "American Samoa" "Andorra" "Angola" "Anguilla" "Antarctica" "Antigua and Barbuda" "Argentina" "Armenia" "Arctic Ocean" "Aruba" "Ashmore and Cartier Islands" "Atlantic Ocean" "Australia" "Austria" "Azerbaijan" "Bahamas" "Bahrain" "Baker Island" "Bangladesh" "Barbados" "Bassas da India" "Belarus" "Belgium" "Belize" "Benin" "Bermuda" "Bhutan" "Bolivia" "Bosnia and Herzegovina" "Botswana" "Bouvet Island" "Brazil" "British Virgin Islands" "Brunei" "Bulgaria" "Burkina Faso" "Burundi" "Cambodia" "Cameroon" "Canada" "Cape Verde" "Cayman Islands" "Central African Republic" "Chad" "Chile" "China" "Christmas Island" "Clipperton Island" "Cocos Islands" "Colombia" "Comoros" "Cook Islands" "Coral Sea Islands" "Costa Rica" "Cote d'Ivoire" "Croatia" "Cuba" "Cyprus" "Czech Republic" "Denmark" "Democratic Republic of the Congo" "Djibouti" "Dominica" "Dominican Republic" "East Timor" "Ecuador" "Egypt" "El Salvador" "Equatorial Guinea" "Eritrea" "Estonia" "Ethiopia" "Europa Island" "Falkland Islands (Islas Malvinas)" "Faroe Islands" "Fiji" "Finland" "France" "French Guiana" "French Polynesia" "French Southern and Antarctic Lands" "Gabon" "Gambia" "Gaza Strip" "Georgia" "Germany" "Ghana" "Gibraltar" "Glorioso Islands" "Greece" "Greenland" "Grenada" "Guadeloupe" "Guam" "Guatemala" "Guernsey" "Guinea" "Guinea-Bissau" "Guyana" "Haiti" "Heard Island and McDonald Islands" "Honduras" "Hong Kong" "Howland Island" "Hungary" "Iceland" "India" "Indian Ocean" "Indonesia" "Iran" "Iraq" "Ireland" "Isle of Man" "Israel" "Italy" "Jamaica" "Jan Mayen" "Japan" "Jarvis Island" "Jersey" "Johnston Atoll" "Jordan" "Juan de Nova Island" "Kazakhstan" "Kenya" "Kingman Reef" "Kiribati" "Kerguelen Archipelago" "Kosovo" "Kuwait" "Kyrgyzstan" "Laos" "Latvia" "Lebanon" "Lesotho" "Liberia" "Libya" "Liechtenstein" "Lithuania" "Luxembourg" "Macau" "Macedonia" "Madagascar" "Malawi" "Malaysia" "Maldives" "Mali" "Malta" "Marshall Islands" "Martinique" "Mauritania" "Mauritius" "Mayotte" "Mexico" "Micronesia" "Midway Islands" "Moldova" "Monaco" "Mongolia" "Montenegro" "Montserrat" "Morocco" "Mozambique" "Myanmar" "Namibia" "Nauru" "Navassa Island" "Nepal" "Netherlands" "Netherlands Antilles" "New Caledonia" "New Zealand" "Nicaragua" "Niger" "Nigeria" "Niue" "Norfolk Island" "North Korea" "North Sea" "Northern Mariana Islands" "Norway" "Oman" "Pacific Ocean" "Pakistan" "Palau" "Palmyra Atoll" "Panama" "Papua New Guinea" "Paracel Islands" "Paraguay" "Peru" "Philippines" "Pitcairn Islands" "Poland" "Portugal" "Puerto Rico" "Qatar" "Reunion" "Republic of the Congo" "Romania" "Russia" "Rwanda" "Saint Helena" "Saint Kitts and Nevis" "Saint Lucia" "Saint Pierre and Miquelon" "Saint Vincent and the Grenadines" "Samoa" "San Marino" "Sao Tome and Principe" "Saudi Arabia" "Senegal" "Serbia" "Seychelles" "Sierra Leone" "Singapore" "Slovakia" "Slovenia" "Solomon Islands" "Somalia" "South Africa" "South Georgia and the South Sandwich Islands" "South Korea" "Spain" "Spratly Islands" "Sri Lanka" "Sudan" "Suriname" "Svalbard" "Swaziland" "Sweden" "Switzerland" "Syria" "Taiwan" "Tajikistan" "Tanzania" "Thailand" "Togo" "Tokelau" "Tonga" "Trinidad and Tobago" "Tromelin Island" "Tunisia" "Turkey" "Turkmenistan" "Turks and Caicos Islands" "Tuvalu" "Uganda" "Ukraine" "United Arab Emirates" "United Kingdom" "USA" "Uruguay" "Uzbekistan" "Vanuatu" "Venezuela" "Viet Nam" "Virgin Islands" "Wake Island" "Wallis and Futuna" "West Bank" "Western Sahara" "Yemen" "Yugoslavia" "Zambia" "Zimbabwe"]</p>
+
+
+[hidden posturl id:posturl "post_url"]
+
+<p>[submit class:black-btn "DOWNLOAD"]</p>
+
+---------------------------
+
+on_sent_ok: "location = pdfurl; jQuery('.wpcf7-form').hide();jQuery('#thanks').show();"
+
+
+-------------------
+POST-SNIPPET 'WHITE-PAPER'
+
+Var pdfurl
+Shortcode
+
+<style>.black-btn {
+    /* background: #d67b28 none repeat scroll 0 0; */
+    border: 0 none;
+    border-radius: 3px;
+    color: #ffffff !important;
+    display: inline-block;
+    font-family: "proxima-nova",sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    max-width: 200px !important;
+}
+
+ .black-btn:hover, .black-btn:focus {
+    background: #000000 !important;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer; 
+}
+
+.post-content .black-btn {
+    max-width: 150px !important;
+}
+
+.wpcf7-form-control {
+    max-width: 450px !important;
+    font-family:Proxima-nova, Arial, sans-serif !important;
+    border: 1px solid #9f9f9f !important;
+    font-size: 18px !important;
+    line-height:20px !important;
+    padding:10px !important;
+}
+
+
+</style>
+
+
+<script>
+var pdfurl = "{pdfurl}";
+</script>
+
+<input class="black-btn" type='button' id='hideshow' value='Download'>
+
+<script>
+jQuery(document).ready(function(){
+// HIDE THE CF7 FORM
+       jQuery('.wpcf7-form').hide();
+       jQuery('#thanks').hide();
+// ON CLICK, HIDE BUTTON AND SHOW CF7 FORM
+        jQuery('#hideshow').on('click', function(event) {        
+             jQuery('.wpcf7-form').toggle('show');
+             jQuery('#hideshow').toggle('show');
+        });
+    });
+</script>
+
+[contact-form-7 id="45351" title="Download Form 2 MA"]
+
+<div id="thanks"><p style="font-weight:bold; color:#45afe2; font-size:24px; line-height:26px;">Thank you - you have now been given access to the document.</p></div>
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=HSsWZvWBMi0
+
+
+
+
+
+
+
+
