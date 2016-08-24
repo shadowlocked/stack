@@ -13,13 +13,15 @@ CODE:
 <div class="stacksiemens" style="width:100% !important; background-color:#000000;"><img src="https://thestack.com/wp-content/uploads/2016/08/STACKHEADSIEMENS.jpg" alt="The Stack" title="The Stack" />[spu-close class="closer" text="Hide" align=""] </div>
 <!--START MAINCENTRE DIV-->
 <div id="maincentre">
-<p style="font-size:20px; line-height:21px; padding-bottom:0px !important;margin-bottom:8px !important;margin-top:3px !important;">in Partnership with <b>Siemens</b> invites you to join our <strong>free online webinar</strong>:</p>
-<h2>Rethinking DCIM: How It's Changing the Game for Data Center Colocation</h2>
-<p style="font-size:20px; line-height:21px; "><strong>Thursday, September 22nd at 3pm. BST</strong></p>
+<p style="font-size:20px; line-height:21px; padding:0 26px 0 26px !important; padding-bottom:0px !important;margin-bottom:8px !important;margin-top:3px !important;">in Partnership with <b>Siemens</b> invites you to join our <strong>free online webinar</strong>:</p>
+<h2 style="padding:0 26px 0 26px !important;">Rethinking DCIM: How It's Changing the Game for Data Center Colocation</h2>
+<p style="font-size:20px; line-height:21px;padding:0 26px 0 26px !important; "><strong>Thursday, September 22nd at 3pm. BST</strong></p>
 <img style="width:200px; height:auto;" class="alignright size-full wp-image-45487" src="https://thestack.com/wp-content/uploads/2016/08/SIEMENS2.jpg" alt="DCIM" />
-<p>If you are seeking to learn how a shift in DCIM adoption for data center colocation is going to change the market, what this means for your daily operation, and the steps you can take to incorporate DCIM into your data center infrastructure management strategy, join us on the 22nd.</p>
-[BUTTON-JS-LINK buttonval="REGISTER" url="https://www.brighttalk.com/webcast/13593/221057/"]
+<p style="padding:0 26px 0 26px !important;">If you are seeking to learn how a shift in DCIM adoption for data center colocation is going to change the market, what this means for your daily operation, and the steps you can take to incorporate DCIM into your data center infrastructure management strategy, join us on the 22nd.</p>
+<a id="siemensreg"class="black-btn" style="background-color:#000000 !important; color:#FFFFFF !important; margin-left:20px !important; padding:8px !important; padding-left:11px !important; padding-right:11px !important; margin-bottom:0px !important;" href="https://www.brighttalk.com/webcast/13593/221057/" target="_blank">REGISTER</a>
 <div class="stacksiemens2" style="width:100% !important; background-color:#000000; height:12px; max-height:12px; overflow:hidden; margin:0 !important"></div>
+
+
 
 ===================================================
 
@@ -50,13 +52,11 @@ CSS:
 	border-radius:none !important;
 	border:solid 1px #000000;
 	margin-bottom:30px !important;
-		margin-top:60px !important;
+	margin-top:60px !important;
+	z-index: 1 !important;
 }
 
-#spu-45492 p,h2 {
-	padding:0 26px 0 26px !important;
-	
-}
+
 #spu-45492 p {
 	line-height:24px !important;
 	
@@ -145,6 +145,7 @@ CSS:
 
 
 }
+
 
 
 
