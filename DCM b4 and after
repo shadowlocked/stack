@@ -1,0 +1,449 @@
+B4
+===============================================================
+
+<?php
+/* Template Name: Data Centre Management */
+ get_header(); ?>
+
+<?php if ( have_posts() ) : ?>
+	        <?php while ( have_posts() ) : the_post(); ?>
+            <?php 
+			$title_yoast = get_post_meta($post->ID, '_yoast_wpseo_title', true);
+      $the_id = get_the_ID();
+            $the_title = $title_yoast != "" ? $title_yoast : get_the_title();
+			?>
+     <img src="<?php bloginfo('url'); ?>/wp-content/uploads/2016/04/dcm-logo.png" style="margin: 10px 0px 25px;"/>
+
+<div class="row" style="padding-top:20px;">
+
+ 
+      <?php if(get_field('background_image')){ ?>
+
+<style>
+
+body{
+background-image: url('<?php echo get_field('background_image'); ?>');
+background-size:cover;
+}
+
+.row{
+margin-top: -6px!important;	
+}
+
+p.title{
+margin-bottom:0px!important;	
+}
+
+.ui-tabs .ui-tabs-nav li{
+	margin:0px;
+}
+
+</style>
+
+<?php } ?>
+
+	<style>
+
+.mag_box{
+    float: left;
+    width: 20%;
+   margin: 20px 12px;
+}
+
+.mag_box img{
+-webkit-box-shadow: 0px 0px 15px 4px rgba(153,153,153,1);
+-moz-box-shadow: 0px 0px 15px 4px rgba(153,153,153,1);
+box-shadow: 0px 0px 15px 4px rgba(153,153,153,1);
+}
+
+
+</style>
+	
+
+	<div class="small-12 large-width columns medium-down-space large-space-left">
+            <div class="row">
+	  
+            <?php
+             
+
+            $post_cat_ids = get_the_terms( $post->ID, 'company_category' );
+            $cats = array();
+            if( ! is_wp_error( $post_cat_ids ) && $post_cat_ids !== false ){
+                foreach($post_cat_ids as $c){                                     
+                        $cats[] = array( 'name' => $c->name, 'slug' => $c->slug );
+                };
+            }
+            ?>
+           
+            <article class="small-12 large-6 columns company_by_location-article noborder">
+            
+          
+      <?php if(get_field('about_us')){ ?>
+	  
+     <?php echo get_field('about_us'); ?>
+	  
+     
+	  
+	  <?php } ?>
+     
+         
+
+  <?php
+                $posts_per_page = 6;
+                $query_args = array(
+                    'post_type' => 'dcm',
+                    'posts_per_page' => $posts_per_page
+                    
+                );
+
+                $posts_query = new WP_Query( $query_args );  ?>
+                <?php if ( $posts_query->have_posts() ) : ?>
+                <?php while ( $posts_query->have_posts() ) : $posts_query->the_post(); ?>
+                
+   <div class="mag_box">
+      <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+   </div>
+                 
+                
+                <?php endwhile; ?>
+                <?php endif; ?>
+<?php wp_reset_query(); ?>
+                
+                
+                            <div class="clear" style="clear:both;margin-bottom: 30px;"></div>
+            
+            </article>
+            
+           
+				</div>
+	        
+	    
+        
+    </div>
+     <aside class="small-12  large-3 large-side-width columns sidebar " style="margin-bottom:20px;">
+			<div class="tablet-line"></div>
+		<div class="row" style="padding: 0px 20px;">
+        
+        
+    <a href="<?php bloginfo('url'); ?>/subscribe-to-data-centre-management/" class="black-btn" style="text-align:center;width:100%;">SUBSCRIBE NOW</a>
+                 
+        <br/>  <br/>    
+       
+       
+  <?php if(get_field('media_kit')){ ?>
+	  
+         
+      <?php //echo get_field('media_kit'); ?>
+	  
+	  
+	  <?php } ?>
+     
+       <?php if(get_field('contact_details')){ ?>
+	  
+     <!--  <h3>Editorial</h3> -->
+      
+      <?php //echo get_field('contact_details'); ?>
+	  
+	  
+	  <?php } ?>
+
+
+<?php echo do_shortcode('[popuppress id="36076"]'); ?>
+
+<br/><br/>
+<h2>Categories</h2>
+<?php 
+    //$children = get_term_children( '1040', 'company_category' );
+
+    $children = get_terms( 'company_category', array( 'child_of' => '1040' ) );
+    
+    foreach($children as $valid){
+    $terms = get_term( $valid, 'company_category' );
+    
+     //print_r($children);
+    
+    ?><p><a href="https://thestack.com/categories/?category=<?php echo $terms->slug; ?>"><?php echo $terms->name; ?></a></p>
+        
+        <?php } ?>
+
+
+      
+      
+    
+ <div style="display:none;"><a class="twitter-timeline"
+  data-widget-id="687955770110046208"
+  href="https://twitter.com/StackTime"
+  data-screen-name="StackTime">
+Tweets by @StackTime
+</a>
+<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+        
+        </div>
+        </aside>
+   
+     <?php endwhile; ?>
+      <?php endif; ?>
+</div>
+
+
+
+<?php get_footer(); ?>
+
+
+===============================================================
+
+AFTER
+
+===============================================================
+
+<?php
+/* Template Name: Data Centre Management */
+ get_header(); ?>
+
+<?php if ( have_posts() ) : ?>
+	        <?php while ( have_posts() ) : the_post(); ?>
+            <?php 
+			$title_yoast = get_post_meta($post->ID, '_yoast_wpseo_title', true);
+      $the_id = get_the_ID();
+            $the_title = $title_yoast != "" ? $title_yoast : get_the_title();
+			?>
+<div class="row" id="headerrow" style="padding-top:20px; height:120px;"><h1>Data Centre Management</h2></div>
+
+<style>
+#headerrow h1 {
+font-size:50px !important;
+color:#000000 !important;
+
+}
+
+
+
+
+#headerrow {
+padding-left:50px !important;
+padding-right:50px !important;
+padding-top:40px !important;
+background-image:url('https://thestack.com/wp-content/uploads/2016/08/DCM-background-header3.png'); 
+background-attachment:local; 
+background-repeat:no-repeat; 
+background-position:top;
+}
+.attentionred {
+color:#ef5a53 !important;
+}
+.attentionblue {
+color:#45afe2 !important;
+}
+.dcmsidebar {
+
+}
+
+/*  MOBILE  */
+@media only screen and (max-width: 64em) {
+
+#headerrow h1 {
+font-size:45px !important;
+}
+
+#headerrow {
+    margin: 0 !important;
+    padding: 20px 20px 0 !important;
+max-height: 120px !important;
+background-image:none !important; 
+}
+
+}
+
+
+
+.contentdcm p {
+    font-family: inherit;
+    font-size: 18px !important;
+    font-weight: normal;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
+    text-rendering: optimizelegibility;
+}
+
+.contentdcm h4 {
+    font-size: 24px;
+    line-height: 30px !important;
+}
+
+.wpcf7-form-control {
+    max-width: 700px !important;
+}
+
+.dcmsidebar p {
+    font-size: 20px !important;
+    line-height: 18px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 9px !important;
+}
+
+.dcmsidebar a {
+font-size:20px !important;
+font-weight:bold !important;
+}
+
+.narrower {
+    max-width: 150px !important;
+}
+
+</style>
+
+<div class="row" style="padding-top:20px;">
+
+ 
+      <?php if(get_field('background_image')){ ?>
+
+<style>
+
+/* body{
+background-image: url('<?php echo get_field('background_image'); ?>');
+background-size:cover;
+} */
+
+.row{
+margin-top: -6px!important;	
+}
+
+p.title{
+margin-bottom:0px!important;	
+}
+
+.ui-tabs .ui-tabs-nav li{
+	margin:0px;
+}
+
+</style>
+
+<?php } ?>
+
+	<style>
+
+.mag_box{
+    float: left;
+    width: 20%;
+   margin: 20px 12px;
+}
+
+.mag_box img{
+/* -webkit-box-shadow: 0px 0px 15px 4px rgba(153,153,153,1);
+-moz-box-shadow: 0px 0px 15px 4px rgba(153,153,153,1);
+box-shadow: 0px 0px 15px 4px rgba(153,153,153,1); */
+}
+
+
+</style>
+	
+
+	<div class="small-12 large-width columns medium-down-space large-space-left">
+            <div class="row">
+
+
+
+
+	  
+            <?php
+             
+
+            $post_cat_ids = get_the_terms( $post->ID, 'company_category', 'id' );
+            $cats = array();
+            if( ! is_wp_error( $post_cat_ids ) && $post_cat_ids !== false ){
+                foreach($post_cat_ids as $c){                                     
+                        $cats[] = array( 'name' => $c->name, 'slug' => $c->slug );
+                };
+            }
+            ?>
+
+
+            <article class="small-12 large-6 columns company_by_location-article noborder">
+
+<div class="contentdcm">        
+          
+      <?php if(get_field('about_us')){ ?>
+	  
+     <?php echo get_field('about_us'); ?>
+	  
+</div>  
+	  
+	  <?php } ?>
+     
+         
+
+
+                
+                
+                            <div class="clear" style="clear:both;margin-bottom: 30px;"></div>
+            
+            </article>
+            
+           
+				</div>
+	        
+	    
+        
+    </div>
+     <aside class="small-12  large-3 large-side-width columns sidebar " style="margin-bottom:0px !important;">
+			<div class="tablet-line"></div>
+		<div class="row" style="padding: 0px 20px;">
+        
+        
+    <a href="#subscribe" id="dcmsubscribe" class="black-btn" style="display:block !important; text-align:center;width:100%; background-color:#000000 !important; padding:8px !important; max-width:200px !important; margin-top:0px !important;">SUBSCRIBE NOW</a>
+                 
+  
+       
+       
+  <?php if(get_field('media_kit')){ ?>
+	  
+         
+      <?php //echo get_field('media_kit'); ?>
+	  
+	  
+	  <?php } ?>
+     
+       <?php if(get_field('contact_details')){ ?>
+	  
+     <!--  <h3>Editorial</h3> -->
+      
+      <?php //echo get_field('contact_details'); ?>
+	  
+	  
+	  <?php } ?>
+
+
+<br/><br/>
+<h2>Categories</h2>
+<div class="dcmsidebar" id="dcmsidebar">
+<?php 
+    //$children = get_term_children( '1040', 'company_category' );
+
+    $children = get_terms( 'company_category', array( 'child_of' => '1040' ) );
+    
+    foreach($children as $valid){
+    $terms = get_term( $valid, 'company_category' );
+    
+     //print_r($children);
+    
+    ?><p><a href="https://thestack.com/categories/?category=<?php echo $terms->slug; ?>"><?php echo $terms->name; ?></a></p>
+        
+        <?php } ?>
+
+</div>
+      
+      
+    
+ 
+        
+        </div>
+        </aside>
+   
+     <?php endwhile; ?>
+      <?php endif; ?>
+</div>
+
+
+
+<?php get_footer(); ?>
