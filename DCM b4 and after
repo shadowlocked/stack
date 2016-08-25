@@ -447,3 +447,103 @@ box-shadow: 0px 0px 15px 4px rgba(153,153,153,1); */
 
 
 <?php get_footer(); ?>
+
+===========================================
+
+CF7
+
+
+
+
+
+<p class="lowerclass">Title *</p>
+[select* class:narrower title "Mr" "Mrs." "Miss" "Ms"]
+
+<p class="lowerclass">First Name *</p>
+[text* firstname]
+
+<p class="lowerclass">Last Name *</p>
+[text* lastname]
+
+<p class="lowerclass">Job Title *</p>
+[text* jobtitle]
+
+<p class="lowerclass">Email *</p>
+[email* email]
+
+<p class="lowerclass">Company Name *</p>
+[text* company]
+
+<p class="lowerclass">Building/house name or number *</p>
+[text* building_number]
+
+<p class="lowerclass">Address 2 *</p>
+[text* Address2]
+
+<p class="lowerclass">Street Name *</p>
+[text* Streetname]
+
+<p class="lowerclass">Address 3</p>
+[text Address3]
+
+<p class="lowerclass">Address 4</p>
+[text Address4]
+
+<p class="lowerclass">City *</p>
+[text* city]
+
+<p class="lowerclass">County</p>
+[text county]
+
+<p>Postcode *</p>
+[text* postcode]
+
+<p class="lowerclass">Country *</p>
+[text* Country "Country *"]
+
+<h2 class="lowerclass">Overseas readers:</h2>
+<strong>As a non UK registrant you would qualify for an electronic issue only.</strong>
+If you are interested in a paid subscription for the print issue please tick yes and we will contact using the details above. *
+[radio oversease_readers "Yes I am interested in the print issue" "No I am happy with the digital issue only"]
+
+<p class="lowerclass">Phone:</p>
+[text phone]
+
+<p class="lowerclass">Fax:</p>
+[text fax]
+
+<p class="lowerclass">Mobile</p>
+[text mobile]
+
+<p class="lowerclass"><strong>1. Does your company operate or plan to build a data centre; or operate data centres on behalf of third parties; or supply products and services for use within a data centre? *</strong></p>
+[radio plan_to_build_dc "Yes" "No"]
+
+<p class="lowerclass"><strong>2. Do you contract out your data centre requirements to a third party supplier? *</strong></p>
+[radio outsource_dc use_label_element "Yes" "No"]
+
+<p class="lowerclass"><strong>3. What is your job function</strong></p>
+[radio job_function "CEO/MD/Chairman/Partner/Owner" "Data Centre Design" "Data Centre Manager" "Facility Management" "Finance Director" "Infrastructure manager" "IT Director" "IT/MIS Manager" "Network Manager" "Project Manager" "Purchasing Manager/Corporate Buyer" "System Security Manager" "Systems Manager" "Other"]
+[text other_job]
+
+<p><strong>4. Please specify your purchasing responsibility *</strong></p>
+[radio responsibility "Influence" "Specify" "Authorise" "None of these"]
+
+<p class="lowerclass"><strong>5. Do you/your company intend to purchase any of the following equipment or services in the next 12 months? Tick all that apply *</strong></p>
+[checkbox* intend_to_purchase "Applications" "Connectivity" "Cooling" "Data Centre design and build services" "Heating/Ventilation" "Operating Systems" "Management Software" "Power Management" "Security" "Servers/Hardware" "Storage" "Third party data centre resources (outsourced)" "Other"][text other_equipment]
+
+<p class="lowerclass"><strong>6. What is your company's/organisation's annual expenditure on the above equipment and services? (GBP) *</strong></p>
+[select* budget "0 - 50k" "51k - 250k" "251k - 500k" "501k - 1M" "1M - 10M" "50M +" "None"]
+
+<p class="lowerclass"><strong>7. What is your company's main business activity *</strong></p>
+[select* business_activity "IT/ Computer/ Data Center" "Non-IT/ Computer/ Data Center"]
+
+<p class="lowerclass"><strong>8. Number of employees *</strong></p>
+[select* no_of_employees "1 - 9" "10 - 49" "50 - 99" "100 - 499" "500 - 599" "1000+"]
+
+<p class="lowerclass"><strong>9. Annual turnover *</strong></p>
+[select* annual_turnover "0 - 499 GBP" "500 - 999GBP" "1A - 4.9M GBP" "5M - 9.99M GBP" "10M - 49.99M GBP" "50M - 99.99M GBP" "100M+"]
+
+<p class="lowerclass"><strong>10. Newsletter Signup</strong></p>
+[checkbox* subscribe_to_dcm "Sign up for data centre newsletter"]
+
+<p>[submit id:dcmregformsubmit "SUBSCRIBE"]</p>
