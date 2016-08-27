@@ -1,0 +1,758 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+
+
+<head>
+	<meta charset="<?php bloginfo('charset'); ?>">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title><?php wp_title(''); ?></title>
+	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/apple-touch-icon.png" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> &raquo; Feed" href="<?php echo bloginfo('rss2_url'); ?>" />
+    
+  
+
+
+	<?php if( is_page_template('template-homepage.php') ): ?>
+		
+                    
+                <?php
+                $posts_per_page = 4;
+                $query_args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => $posts_per_page,    
+                    'meta_query' => array(                    
+                            array(
+                                    'key'     => 'stack_featured_post',
+                                    'value'   => true,
+                            ),
+                    )
+                );
+
+                $posts_query = new WP_Query( $query_args );              
+                $i = 1;
+                ?>
+                <?php if( $posts_query->have_posts() ): ?>
+                                <style>
+<?php /* HOMEPAGE - FEATURED IMAGES */ 
+while( $posts_query->have_posts() ): $posts_query->the_post(); ?>
+<?php if ( has_post_thumbnail() ): ?><?php if( $i === 1 ) { $small_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), '552x225_crop' ); ?>.feat-img-<?php echo $i; ?> { background-image: url("<?php echo esc_url( $small_image_url[0] ); ?>"); }<?php }	if(  $i === 2 ) { ?>.feat-img-<?php echo $i; ?> { background-color: #4b4a4a; } <?php }	if(  $i === 3 ) { ?>.feat-img-<?php echo $i; ?> { background-color: #3d3d3d; }<?php	} if(  $i === 4 ) {	?>.feat-img-<?php echo $i; ?> { background-color: #4b4a4a; }<?php	} ?><?php endif; ?>  
+<?php $i++; ?>
+<?php endwhile; wp_reset_postdata(); ?>
+
+
+
+                                </style>
+                <?php endif; ?>                        
+		
+	<?php endif; ?>
+
+	<?php wp_head(); ?>
+
+
+
+
+
+<script type='text/javascript'>
+  (function() {
+    var useSSL = 'https:' == document.location.protocol;
+    var src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+  })();
+</script>
+
+<script type='text/javascript'>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/119302754/Article_300x250', [300, 250], 'div-gpt-ad-1441361993438-0').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/MultiSize_Leaderboard_ATF', [[728, 90], [970, 90], [970, 250]], 'div-gpt-ad-1441361993438-1').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/MPU_300x250//300x600', [[300, 250], [300, 600]], 'div-gpt-ad-1441361993438-2').addService(googletag.pubads());
+ googletag.defineSlot('/119302754/Leaderboard_728x90_BTF', [728, 90], 'div-gpt-ad-1441740884826-0').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/Wallpaper_1600x1000', [1600, 1000], 'div-gpt-ad-1441361993438-4').addService(googletag.pubads());
+googletag.defineSlot('/119302754/TheStack_Article_300x250', [300, 250], 'div-gpt-ad-1450917885909-0').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/TheStack_Article_728x90_Bottom', [728, 90], 'div-gpt-ad-1450917885909-1').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/TheStack_Article_TopBanner', [[970, 90], [970, 250], [728, 90]], 'div-gpt-ad-1450917885909-2').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/TheStack_Directory_300x600', [300, 600], 'div-gpt-ad-1450917885909-3').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/TheStack_Expert_300x250', [300, 250], 'div-gpt-ad-1450917885909-4').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/TheStack_Expert_TopBanner', [[970, 90], [970, 250], [728, 90]], 'div-gpt-ad-1450917885909-5').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/TheStack_Homepage_728x90_Bottom', [728, 90], 'div-gpt-ad-1450917885909-6').addService(googletag.pubads());
+    googletag.defineSlot('/119302754/TheStack_Homepage_TopBanner', [[970, 90], [970, 250], [728, 90]], 'div-gpt-ad-1450917885909-7').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/119302754/TheStack_ROS_Wallpaper', 'div-gpt-ad-1452131734654-0').addService(googletag.pubads());
+    
+
+
+    googletag.pubads().setTargeting('post_id', ['<?php echo get_the_ID(); ?>'] );
+
+
+<?php 
+if ( in_category('cloud') || is_category('cloud') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "cloud");';
+}
+else if ( in_category('data-centre') || is_category('data-centre') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "data-centre");';
+}
+else if ( in_category('iot') || is_category('iot') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "iot");';
+}
+else if ( in_category('profiles') || is_category('profiles') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "profiles");';
+}
+else if ( in_category('applications-and-platforms') || is_category('applications-and-platforms') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "applications-and-platforms");';
+}
+else if ( in_category('app-development') || is_category('app-development') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "app-development");';
+}
+else if ( in_category('big-data-analytics') || is_category('big-data-analytics') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "big-data-analytics");';
+}
+else if ( in_category('channelvarsisvssi') || is_category('channelvarsisvssi') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "channelvarsisvssi");';
+}
+else if ( in_category('content-delivery-network') || is_category('content-delivery-network') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "content-delivery-network");';
+}
+else if ( in_category('mobile-byod') || is_category('mobile-byod') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "mobile-byod");';
+}
+else if ( in_category('open-source') || is_category('open-source') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "open-source");';
+}
+else if ( in_category('paas') || is_category('paas') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "paas");';
+}
+else if ( in_category('saas') || is_category('saas') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "saas");';
+}
+else if ( in_category('sdnnfv') || is_category('sdnnfv') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "sdnnfv");';
+}
+else if ( in_category('security-applications-and-platforms') || is_category('security-applications-and-platforms') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "security-applications");';
+}
+else if ( in_category('service-providers-cloud-hosting-managed-services') || is_category('service-providers-cloud-hosting-managed-services') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "service-providers-cloud");';
+}
+else if ( in_category('virtualisation') || is_category('virtualisation') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "virtualisation");';
+}
+else if ( in_category('datacentre') || is_category('datacentre') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "datacentre");';
+}
+else if ( in_category('business-services') || is_category('business-services') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "business-services");';
+}
+else if ( in_category('cabling') || is_category('cabling') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "cabling");';
+}
+else if ( in_category('profiles') || is_category('profiles') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "profiles");';
+}
+else if ( in_category('datacentre') || is_category('datacentre') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "datacentre");';
+}
+else if ( in_category('designbuild') || is_category('designbuild') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "designbuild");';
+}
+else if ( in_category('flooring') || is_category('flooring') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "flooring");';
+}
+else if ( in_category('hvacs') || is_category('hvac') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "hvac");';
+}
+else if ( in_category('modular') || is_category('modular') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "modular");';
+}
+else if ( in_category('operators') || is_category('operators') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "operators");';
+}
+else if ( in_category('powerups') || is_category('powerups') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "powerups");';
+}
+else if ( in_category('safety') || is_category('safety') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "safety");';
+}
+else if ( in_category('securityaccess-control') || is_category('securityaccess-control') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "securityaccess-control");';
+}
+else if ( in_category('education') || is_category('education') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "education");';
+}
+else if ( in_category('infrastructure') || is_category('infrastructure') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "infrastructure");';
+}
+else if ( in_category('colocation') || is_category('colocation') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "colocation");';
+}
+else if ( in_category('dcim') || is_category('dcim') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "dcim");';
+}
+else if ( in_category('green-technology') || is_category('green-technology') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "green-technology");';
+}
+else if ( in_category('iaas') || is_category('iaas') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "iaas");';
+}
+else if ( in_category('networking') || is_category('networking') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "networking");';
+}
+else if ( in_category('servers') || is_category('servers') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "servers");';
+}
+else if ( in_category('software-defined-dc') || is_category('software-defined-dc') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "software-defined-dc");';
+}
+else if ( in_category('storage') || is_category('storage') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "storage");';
+}
+else if ( in_category('press-release') || is_category('press-release') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "press-release");';
+}
+else if ( in_category('security') || is_category('security') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "security");';
+}
+else if ( in_category('servers') || is_category('servers') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "servers");';
+}
+else if ( in_category('world') || is_category('world') ) 
+{ 
+       echo 'googletag.pubads().setTargeting("catname", "world");';
+}
+?>
+
+    googletag.pubads().collapseEmptyDivs();
+    googletag.pubads().enableSyncRendering();
+    googletag.enableServices();
+  });
+</script>
+
+
+<?php 
+$titan = TitanFramework::getInstance( 'TheStack' );
+
+ $mySavedValue = $titan->getOption( 'awe_skin_background_image_url' );
+ ?>
+<style>
+
+/*#content h1.title{ color:#FFF; }*/
+
+.single-post #content h1.title{ color: #000; }
+
+/* body{ 
+background-image: url("https://thestack.com/wp-content/uploads/2016/08/Background-the-stackx1.png"); 
+background-size: cover;
+background-repeat: repeat-x;
+background-position: center top;
+background-attachment: fixed;
+background-color:#282e28;
+ } */
+
+body {
+	/*background-image:url('https://thestack.com/wp-content/uploads/2016/08/Background-Stack2.png');*/
+	background-size:1920px;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:top;
+	/*background-color:#3f444a;*/
+	
+}
+
+
+/*Theming Code by Danish*/
+
+body.default-theme{
+background-image: url(<?php bloginfo('template_directory'); ?>/img/DEFAULT.png);
+background-color:#3f444a;
+}
+
+body.theme1{
+background-image: url(<?php bloginfo('template_directory'); ?>/img/CLOUD.png);
+background-color:#3f444a;
+}
+
+
+body.theme2{
+background-image: url(<?php bloginfo('template_directory'); ?>/img/IOT.png);
+background-color:#3f444a;
+}
+
+body.theme3{
+background-image: url(<?php bloginfo('template_directory'); ?>/img/DATA-CENTRE.png);
+background-color:#3f444a;
+}
+
+body.theme4{
+background-image: url(<?php bloginfo('template_directory'); ?>/img/SECURITY.png);
+background-color:#3f444a;
+}
+
+body.theme5{
+background-image: url(<?php bloginfo('template_directory'); ?>/img/BIG-DATA.png);
+background-color:#3f444a;
+}
+
+/*Theming Code by Danish*/
+
+
+
+@media only screen and (max-width: 64em) {
+
+body {
+	/*background-image:url('https://thestack.com/wp-content/uploads/2016/08/transparent.png') !important;*/
+	background-size:1px;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:top;
+	/*background-color:#3f444a;*/
+	}
+
+}
+@media only screen and (max-width: 20em) {
+
+body {
+	background-image:url('https://thestack.com/wp-content/uploads/2016/08/transparent.png') !important;
+	background-size:1px;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:top;
+	background-color:#3f444a;
+	}
+
+}
+
+
+
+.adwrapper{ display:none; }
+
+ul.top-bar-menu li.menu-item-has-children>a:after{
+    border-top: 8px solid rgb(255,255,255)!important;
+    border-right: 7px solid transparent!important;
+    border-left: 7px solid transparent!important;
+    top: 30%!important;
+}
+
+.top-bar-menu li{
+	position:relative;
+}
+
+.sub-menu {
+    background: #000 none repeat scroll 0 0;
+    display: none;
+    left: -10px;
+    margin-left: 3px;
+    margin-top: -2px;
+    min-width: 430px;
+    padding: 10px 0;
+    position: absolute;
+}
+
+.sub-menu li{
+	border-left: 0px!important;
+   float:left;
+    text-align: left;
+	padding: 5px;
+}
+
+@media screen and (max-width: 1024px){
+
+
+.sub-menu li{ float:none; display: block; } 
+
+.sub-menu {
+    display: block!important;
+    margin: 0px;
+    padding: 0px 10px;
+position: initial;
+    border-radius: 10px;
+}
+
+.sub-menu li{
+padding: 0px;
+}
+
+}
+
+
+#cookieChoiceDismissIcon{
+display: none!important;
+}
+
+
+
+</style>
+
+<script async type="text/javascript">
+
+/*jQuery( document ).ready(function() {
+	
+jQuery( ".top-bar-menu li" ).hover(
+  
+  function() {
+  jQuery( this ).children( ".sub-menu" ).show();
+  }
+);
+
+
+
+});
+*/
+
+
+jQuery(function($){
+  var timerOut;
+  
+  $('.top-bar-menu li').on('mouseover', function(){
+    clearTimeout(timerOut);
+    var self = this;
+    
+      $('ul', self).show();
+   
+    
+  }).on('mouseout', function() {
+    var self = this;
+   
+      $('ul', self).hide();
+   
+    
+  });
+
+
+$( ".pps-btn" ).click(function() {
+  $("#posturl").attr("value", window.url)
+});
+
+
+
+});
+
+</script>
+
+
+
+
+<!-- ################################################### -->
+<!-- Google Rich Data Card () for Cloud Expo Europe 2017 -->
+<!-- https://search.google.com/structured-data/testing-tool -->
+<!-- ################################################### -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "name": "Cloud Expo Europe 2017",
+    "description": "Cloud Expo Europe returns on 15-16 March 2017 with the biggest and best instalment to date. The 2017 event will bring you an unrivalled line up of world-class suppliers to the cloud technology sector, thousands of hours of free content from over 500 of the industry’s leading international practitioners and first class peer networking opportunities",
+  "startDate" : "2017-03-15T09:30",
+  "endDate" : "2017-03-16T17:30",
+  "image": "https://thestack.com/wp-content/uploads/2016/08/CEE-LOGO-.png",
+  "url" : "https://thestack.com/cloud-expo-europe-why-visit-the-worlds-most-acclaimed-cloud-event/",
+  "location" : {
+    "@type" : "Place",
+    "sameAs" : "http://excel.london/visitor/getting-here",
+    "name" : "The London ExCel Centre",
+    "address" : "ExCeL, London 1 Western Gateway, Royal Victoria Dock, London E16 1XL"
+  }
+}
+</script>
+<!-- ################################################### -->
+
+
+<style>
+
+.wpcf7-form-control{
+border: 1px solid #9F9F9F;
+width:auto!important;
+}
+
+span.wpcf7-form-control{
+border: 0px solid #9F9F9F!important;
+}
+
+span.wpcf7-list-item{
+display: block;
+}
+
+
+span.wpcf7-list-item{
+margin-left:1px!important;
+}
+
+
+</style>
+
+  
+	
+</head>
+
+<?php global $is_directory, $directory_class; ?>
+
+<?php
+if(is_archive()){
+$queried_object = get_queried_object(); 
+$taxonomy = $queried_object->taxonomy;
+$term_id = $queried_object->term_id;
+
+$the_cat = 'category' . '_' . $term_id;
+
+$theme_selected = get_field('theme', $the_cat); 
+}elseif(is_singular( 'post' )){
+
+global $wp_query;
+$post_id = $wp_query->post->ID;
+$cat_array = get_the_category($post_id);
+$the_cat = 'category' . '_' . $cat_array[0]->term_id;
+$theme_selected = get_field('theme', $the_cat); 
+
+}else{
+
+
+  global $wp_query;
+  $post_id = $wp_query->post->ID;
+  $theme_selected = get_field('theme', $post_id);
+
+}
+
+?>
+
+
+
+<body class="<?php if($theme_selected){ echo $theme_selected;}else{ echo 'default-theme'; } ; ?>"<?php if( isset( $directory_class ) ) { body_class( $directory_class ); } else {  body_class(); }  ?>>
+<!-- M.ANDERSON AUG 2016 -->
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PP8TJN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PP8TJN');</script>
+<!-- End Google Tag Manager -->
+<!-- END M.ANDERSON AUG 2016 -->
+
+
+
+<!--[if lte IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<a href="#content" class="screen-reader-shortcut" tabindex="1"><?php _e('Skip to content', 'framework') ?></a>
+
+<header class="master-header" style="background:#000!important;">
+
+	<div class="row">
+		<div class="small-12 columns header-wrapper">
+			<div class="logo-container" itemtype="http://schema.org/Organization" itemscope>
+				<a class="logo" href="<?php echo home_url('/'); ?>">
+					
+						<img src="<?php echo aw_get_img_path(); ?>/logo.png" srcset="<?php echo aw_get_img_path(); ?>/logo@2x.png 2x" alt="Logo" itemprop="logo">
+				</a>
+		    </div>
+
+		    <a class="mobile-menu-switch" href="#">
+				<span class="burger"></span>
+			</a>
+
+			<nav class="top-navigation" role="navigation">
+				<div class="menu-wrapper">
+              <div class="onlymobile">  <?php 		wp_nav_menu( array( 
+							'container' => false,
+							'menu_class' => 'top-bar-menu',
+							'theme_location' => 'main-nav',
+							'depth' => 5
+						) );
+
+	
+					?></div>
+
+ <div class="menume"><?php //shailan_dropdown_menu();
+ wp_nav_menu( array( 
+							'container' => false,
+							'menu_class' => 'top-bar-menu',
+							'theme_location' => 'main-nav',
+							'depth' => 5
+						) ); ?> </div>
+
+<style>
+				 @media screen and (max-width:1024px){
+			.menume{ display:none; }
+			.onlymobile{ display:block; }
+				 }
+				 
+				 @media screen and (min-width:1025px){
+					.onlymobile{ display:none; } 
+					.menume{ display:block; }
+				 }
+				 
+				 </style>
+				</div>
+				<?php if( $is_directory ) { ?>
+				<div class="top-search">
+					<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>"/>
+						<div class="aw-search-wrapper">
+							<legend for="s" class="screen-reader-text"><?php _e('Search for:', 'framework'); ?></legend>
+							<input name="s" id="s" class="aw-search" type="text" placeholder="<?php _e('Search', 'framework'); ?>">
+						</div>
+						<button class="aw-submit" type="submit"><span class="screen-reader-text"><?php _e('Search', 'framework'); ?></span><span class="search-icon"></span></button>
+					</form>
+					<a class="aw-rss" href="<?php echo bloginfo('rss2_url'); ?>"><span class="screen-reader-text"><?php _e('Rss Feed', 'framework'); ?></span><span class="rss-icon"></span></a>
+				</div>
+				<?php } else { ?>
+				<div class="top-search">
+					<form method="get" id="cse-search-box" action="/search-results/"/>
+						<div class="aw-search-wrapper">
+							<legend for="aw-search" class="screen-reader-text"><?php _e('Search for:', 'framework'); ?></legend>
+							<input name="q" id="q" class="aw-search" type="text" placeholder="<?php _e('Search', 'framework'); ?>">
+							<input type="hidden" name="cx" value="006354952468776912167:gnyj8fptyfg" />
+							<input type="hidden" name="cof" value="FORID:10" />
+							<input type="hidden" name="ie" value="UTF-8" />
+						</div>
+						<button class="aw-submit" type="submit"><span class="screen-reader-text"><?php _e('Search', 'framework'); ?></span><span class="search-icon"></span></button>
+					</form>
+					<a class="aw-rss" href="<?php echo bloginfo('rss2_url'); ?>"><span class="screen-reader-text"><?php _e('Rss Feed', 'framework'); ?></span><span class="rss-icon"></span></a>
+				</div>
+				<?php } ?>
+			</nav>
+
+		</div>
+	</div>
+</header>
+
+<?php
+$titan = TitanFramework::getInstance( 'TheStack' );
+$awe_show_skin = $titan->getOption( 'awe_show_skin' );
+$awe_skin_background_image_url = $titan->getOption( 'awe_skin_background_image_url' );
+$awe_skin_top_image_url = $titan->getOption( 'awe_skin_top_image_url' );
+$awe_skin_background_color = $titan->getOption( 'awe_skin_background_color' );
+$awe_skin_click_through_url = $titan->getOption( 'awe_skin_click_through_url' );
+$awe_skin_open_in_a_new_window = $titan->getOption( 'awe_skin_open_in_a_new_window' );
+
+$hide_skinning = get_field( 'hide_skinning' );
+
+if(!$hide_skinning) {
+if( $awe_show_skin && $awe_skin_background_image_url && $awe_skin_click_through_url ) {
+	?>
+	<div class="master-content-wrapper" data-bg-img="<?php echo $awe_skin_background_image_url; ?>" data-bg-color="<?php echo $awe_skin_background_color; ?>" data-url="<?php echo $awe_skin_click_through_url; ?>" data-url-target="<?php if( $awe_skin_open_in_a_new_window ) { ?>_blank<?php } else { echo "_self"; } ?>">
+	<?php
+	} else { ?><div class="master-content-wrapper">
+	<?php }
+} else { ?><div class="master-content-wrapper"><?php } ?>
+
+	<?php if(!$hide_skinning && $awe_show_skin && !empty($awe_skin_top_image_url)): ?>
+
+
+		<div class="top-banner">
+			<div class="row">
+				<a href="<?php echo $awe_skin_click_through_url; ?>" target="<?php if( $awe_skin_open_in_a_new_window ) { ?>_blank<?php } else { echo "_self"; } ?>">
+					<img src="<?php echo $awe_skin_top_image_url; ?>" alt="<?php _e('Top Banner Image', 'framework'); ?>">
+				</a>
+			</div>
+		</div>
+	<?php endif; ?>
+
+  <style type="text/css">
+
+  #content.master-content{
+width:100%!important;
+
+  }
+  </style>
+
+
+<div id="content" class="master-content">
+
+
+<?php
+	if( ! $is_directory ) { 
+		if ( is_active_sidebar( 'leaderboard_top' ) ) { ?>
+		<div class="row row-leaderboard">
+			<div class="small-12 columns">
+				<div class="leaderboard top-leaderboard" style="max-width: 970px;">
+					<?php dynamic_sidebar( 'leaderboard_top' ); ?>
+				</div>
+			</div>
+		</div>
+	<?php }
+	}
+	 ?>
+
+
+<style>
+
+/*  TO FIX MOBILE HEADER TOP MARGINS  */
+
+
+
+@media only screen and (max-width: 20em) {
+.master-content > .row {
+    padding-top: 0 !important;
+	}
+}
+
+
+@media only screen and (max-width: 30em) {
+.master-content {
+    padding-top: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+.master-content > .row {
+    padding-top: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 64em) {
+.master-content {
+    padding-top: 40px !important;
+	}
+}
+
+
+
+
+</style>
