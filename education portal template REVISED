@@ -1,0 +1,199 @@
+<?php
+/* Template Name: Education Portal */
+get_header(); ?>
+<div class="row leaderboard-spacer"></div>
+<?php while(have_posts()): the_post();  ?>
+<div class="row category-label" style="background-image: url(<?php if(get_field('banner_image')){ echo get_field('banner_image') . '); background-color: transparent;'; }else{ echo aw_get_img_path(); ?>/header-education-portal.png); <?php } ?>">
+    <div class="small-12 columns"  id="headerrow" >
+        <h1 class="category-title">Education Portal</h1>
+    </div>
+</div>
+ 
+
+<div class="row category-content tablet-gray-right" style="background-color:#FFFFFF !important;">
+    <div class="small-12 medium-down-space" style="padding: 0px 40px; background-color:#FFFFFF !important; ">
+            <div class="row">
+                
+<?php if(get_field('background_image')){ ?>
+
+<style>
+/* body{
+background-image: url('<?php echo get_field('background_image'); ?>');
+background-size:cover; */
+}
+
+.row{
+margin-top: -6px!important; 
+}
+</style>
+
+<?php } ?>      <!-- Page content -->
+                <article class="small-12 directory-article company-directory">
+                           
+                           <?php the_content(); ?>
+                           
+                        </article>
+                  
+            </div>
+          
+        </div>
+
+<aside class="small-12  large-3 large-side-width columns sidebar " style="display:none; background-color:#FFFFFF !important;">
+            <div class="tablet-line"></div>
+        <div class="row">
+                            
+            <div id="text-9" class="widget widget_text"><div class="line"></div>
+            <h4 class="widget-title">Recently Updated</h4>
+            <div class="textwidget">
+<?php $query_args = array(
+    'post_type' => 'directory',
+    'posts_per_page' => 3,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'directory_category',
+            'field'    => 'slug',
+            'terms'    => 'education-portal'
+            ))
+            
+);
+$posts_query = new WP_Query( $query_args );
+?>
+
+<div class="row">
+                <?php while($posts_query->have_posts()): $posts_query->the_post();  ?>
+                <?php $company_short_description = get_field('short_description', $post->ID); ?>
+                <?php
+                $cats = array();
+                $post_cat_ids = get_the_terms( $post->ID, 'company_category' );
+                if( ! is_wp_error( $post_cat_ids ) && $post_cat_ids !== false ){
+                    foreach($post_cat_ids as $c){                                     
+                            $cats[] = array( 'name' => $c->name, 'slug' => $c->slug );
+                    };
+                }
+                ?>
+           <div class="coverarticle" style="overflow:hidden;">
+           <div class="company_img">
+            <?php the_post_thumbnail(); ?>
+            </div>
+           <article class="small-12 large-space-left columns directory-article education-article company-directory">
+                                 <p class="group">
+                                    <?php $ic = 0; $cat_len = count( $cats ); foreach( $cats AS $cat ): $ic++ ?>
+                                        <?php echo esc_html( $cat['name'] ); ?>
+                                        <?php echo $cat_len != $ic ? " | " : ""; ?>                        
+                                <?php endforeach; ?>
+                                </p>
+                                <h3 class="title" style="font-size:18px;"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+              <h5><?php $regions = get_post_meta ( get_the_ID(), 'company_region', false );
+foreach ($regions as $value) {
+    foreach ($value as $key){
+        echo $key . ' ' ;
+    }
+} ?></h5>
+                     <p class="blurb"><?php echo esc_html($company_short_description); ?></p>
+                            
+            </article>
+           </div>
+                <?php endwhile; wp_reset_postdata(); ?>        
+            </div>
+
+
+
+
+            </div>
+        </div>
+        
+        </div>
+</aside>
+
+
+</div>
+
+<style>
+
+p {
+font-size:18px !important;
+}
+
+#headerrow {
+    background-attachment: local;
+    background-color: #ffffff !important;
+    background-image: url("https://thestack.com/wp-content/uploads/2016/08/CNET6.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    padding-top: 40px !important;
+}
+
+.category-title {
+    color: #000000 !important;
+    display: block !important;
+    line-height: 0.9 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    overflow: hidden !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    text-shadow: none !important;
+    top: 10px !important;
+}
+
+.small-12.medium-down-space {
+    padding-left: 65px !important;
+}
+.category-label .columns {
+max-height:125px !important;
+
+}
+
+
+@media only screen and (max-width: 64em) {
+
+
+
+.category-title {
+font-size:34px !important;
+color:#000000 !important;
+}
+
+
+
+body {
+overflow-x: hidden !important;
+}
+
+#headerrow {
+padding-left:10px !important;
+padding-right:10px !important;
+
+padding-top:25px !important;
+margin-bottom:0 !important;
+    background-image: url("https://thestack.com/wp-content/uploads/2016/08/CNET-MOBILE.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+background-color: #F4983A !important;
+font-size:30px !important;
+text-align:center !important;
+}
+
+.small-12.medium-down-space {
+    padding-left: 30px !important;
+}
+
+.small-12.directory-article.company-directory > h1 {
+    padding-top: 10px !important;
+}
+
+
+}
+
+
+</style>
+
+
+
+ <?php endwhile; ?>    
+
+<?php get_footer(); ?>
